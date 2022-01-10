@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ResponsiPaymu">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
@@ -19,7 +22,7 @@
             android:name=".RecoveryActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
