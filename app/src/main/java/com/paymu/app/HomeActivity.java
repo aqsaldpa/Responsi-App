@@ -43,6 +43,7 @@ public class HomeActivity extends AppCompatActivity {
             String name = getIntent().getStringExtra("name");
             tvname.setText(name);
         }
+
         String name = getIntent().getStringExtra("name");
         tvname.setText(name);
         session.setLoggedin(true);

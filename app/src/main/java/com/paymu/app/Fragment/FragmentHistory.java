@@ -2,13 +2,22 @@ package com.paymu.app.Fragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 
+import com.paymu.app.Adapter.RVAdapter;
+import com.paymu.app.HistoryModelClass;
 import com.paymu.app.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,7 +25,10 @@ import com.paymu.app.R;
  * create an instance of this fragment.
  */
 public class FragmentHistory extends Fragment {
-
+    List<HistoryModelClass> historylist;
+    RecyclerView mrecyclerview;
+    LinearLayoutManager mlayoutManager;
+    RVAdapter adapter;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -51,16 +63,48 @@ public class FragmentHistory extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_history, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history, container, false);
+        mrecyclerview = view.findViewById(R.id.Recyclervieww);
+        mrecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+        mrecyclerview.setAdapter(adapter);
+        initData();
+        initRecyclerView();
+
+        return view;
+
+    }
+
+    private void initRecyclerView() {
+        RecyclerView mrecyclerview = (RecyclerView) getActivity().findViewById(R.id.Recyclervieww);
+
+        LinearLayoutManager layoutManager = mlayoutManager;
+        new LinearLayoutManager(getActivity());
+        mrecyclerview.setLayoutManager(layoutManager);
+        mlayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mrecyclerview.setLayoutManager(layoutManager);
+        RVAdapter adapter = new RVAdapter(historylist);
+        mrecyclerview.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+
+    }
+
+    private void initData() {
+        historylist = new ArrayList<>();
+
+        historylist.add(new HistoryModelClass(R.drawable.logo, "17 November 2020", "PLN Bill", "Succes", "_______________________________________"));
+        historylist.add(new HistoryModelClass(R.drawable.logo, "20 November 2020", "PLN Bill", "Succes", "_______________________________________"));
     }
 }

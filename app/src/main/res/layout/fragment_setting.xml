@@ -7,187 +7,142 @@
     android:background="#CCD1E4"
     tools:context=".Fragment.FragmentSetting">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="660dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ProfileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Profile"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:src="@drawable/ic_baseline_account_circle_24" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
 
             <TextView
+                android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_regular"
-                android:text="Setting"
+                android:text="Account Bank"
                 android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20sp" />
 
-            <LinearLayout
-                android:id="@+id/linear"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="35dp"
-                android:layout_marginEnd="18dp"
-                android:background="#3F51B5"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginTop="30dp"
-                    android:drawableTop="@drawable/ic_baseline_attach_money_24"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Pay"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginTop="30dp"
-                    android:drawableTop="@drawable/ic_baseline_history_24"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="History"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="55dp"
-                    android:layout_marginTop="30dp"
-                    android:drawableTop="@drawable/ic_baseline_account_circle_24"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Account"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="36dp"
-                android:fontFamily="@font/poppins_regular"
-                android:text="Your Recommendation"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="360dp"
-                android:layout_height="3dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
-                android:background="@color/black"
-                android:orientation="horizontal" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="181dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/ilustr"
-
-                    tools:layout_editor_absoluteY="319dp" />
-
-                <ImageView
-                    android:layout_width="181dp"
-                    android:layout_height="157dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ilustr"
-                    tools:layout_editor_absoluteX="214dp"
-                    tools:layout_editor_absoluteY="476dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="181dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/ilustr"
-
-                    tools:layout_editor_absoluteY="319dp" />
-
-                <ImageView
-                    android:layout_width="181dp"
-                    android:layout_height="157dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ilustr"
-                    tools:layout_editor_absoluteX="214dp"
-                    tools:layout_editor_absoluteY="476dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="181dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/ilustr"
-
-                    tools:layout_editor_absoluteY="319dp" />
-
-                <ImageView
-                    android:layout_width="181dp"
-                    android:layout_height="157dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ilustr"
-                    tools:layout_editor_absoluteX="214dp"
-                    tools:layout_editor_absoluteY="476dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="181dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/ilustr" />
-
-                <ImageView
-                    android:layout_width="181dp"
-                    android:layout_height="157dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ilustr"
-                    tools:layout_editor_absoluteX="214dp"
-                    tools:layout_editor_absoluteY="476dp" />
-
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:src="@drawable/ic_baseline_account_balance_wallet_24" />
         </LinearLayout>
-    </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Credit Card"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:src="@drawable/ic_baseline_credit_card_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Password"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:src="@drawable/ic_baseline_vpn_key_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Help"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:src="@drawable/ic_baseline_help_24" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
