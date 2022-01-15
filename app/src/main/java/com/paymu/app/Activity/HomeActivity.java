@@ -55,6 +55,15 @@ public class HomeActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        if (getIntent().getIntExtra("fragmentNumber",0)==1){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, new FragmentSetting()).commit();
+        }else if (getIntent().getIntExtra("fragmentNumber",0)==2){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,new FragmentPayment()).commit();
+        }else{
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,new FragmentHome()).commit();
+        }
+
         bottomNavigationView.setOnItemSelectedListener(item -> {
             Fragment fragment = null;
             switch (item.getItemId()) {

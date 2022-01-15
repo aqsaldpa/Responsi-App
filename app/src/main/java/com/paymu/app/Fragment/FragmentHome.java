@@ -1,5 +1,6 @@
 package com.paymu.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.paymu.app.Activity.ProfileActivity;
 import com.paymu.app.R;
 
 /**
@@ -17,6 +20,7 @@ import com.paymu.app.R;
  */
 public class FragmentHome extends Fragment {
 
+    TextView pay , history , acc ;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -60,7 +64,23 @@ public class FragmentHome extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_home,container,false);
+        pay = view.findViewById(R.id.btnpay);
+        history = view.findViewById(R.id.btnHistory);
+        acc = view.findViewById(R.id.btnacc);
+        pay.setOnClickListener(v->{
+                getFragmentManager().beginTransaction().replace(R.id.container,new FragmentPayment()).commit();
+            });
+        history.setOnClickListener(v->{
+            getFragmentManager().beginTransaction().replace(R.id.container,new FragmentHistory()).commit();
+        });
+        acc.setOnClickListener(v->{
+            startActivity(new Intent(getActivity(), ProfileActivity.class));
+        });
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return view;
     }
 }

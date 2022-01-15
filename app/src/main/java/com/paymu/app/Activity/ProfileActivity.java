@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.paymu.app.Fragment.FragmentSetting;
 import com.paymu.app.R;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
         title.setText("Profile");
         back = findViewById(R.id.iconleft);
         back.setOnClickListener(v -> {
-            Intent intent = new Intent(this,HomeActivity.class);
+            Intent intent = new Intent(this, HomeActivity.class);
             intent.putExtra("fragmentNumber",1);
             startActivity(intent);
         });

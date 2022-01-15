@@ -51,28 +51,30 @@ public class RecoveryActivity extends AppCompatActivity {
         btnSendEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NotificationCompat.Builder builder = new NotificationCompat.Builder(RecoveryActivity.this,"Testing Notif");
-                builder.setContentTitle("Email telah dikirimkan");
-                builder.setContentText("Mohon ditunggu :)");
-                builder.setSmallIcon(R.drawable.ic_baseline_check_circle_24);
-                builder.setAutoCancel(true);
 
-                NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    int importance = NotificationManager.IMPORTANCE_HIGH;
-                    NotificationChannel notificationChannel = new
-                            NotificationChannel(channelnotif, "contoh channel", importance);
-                    notificationChannel.enableLights(true);
-                    notificationChannel.setLightColor(Color.RED);
-                    builder.setChannelId(channelnotif);
-                    assert mNotificationManager != null;
-                    mNotificationManager.createNotificationChannel(notificationChannel);
-                }
-                assert mNotificationManager != null;
-                mNotificationManager.notify((int) System.currentTimeMillis(), builder.build());
                 String email = etEmail.getText().toString().trim();
                 UserEntity userEntity = userDAO.recovery(email);
                 if (userEntity !=null && Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(RecoveryActivity.this,"Testing Notif");
+                    builder.setContentTitle("Email telah dikirimkan");
+                    builder.setContentText("Mohon ditunggu :)");
+                    builder.setSmallIcon(R.drawable.ic_baseline_check_circle_24);
+                    builder.setAutoCancel(true);
+
+                    NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                        int importance = NotificationManager.IMPORTANCE_HIGH;
+                        NotificationChannel notificationChannel = new
+                                NotificationChannel(channelnotif, "contoh channel", importance);
+                        notificationChannel.enableLights(true);
+                        notificationChannel.setLightColor(Color.RED);
+                        builder.setChannelId(channelnotif);
+                        assert mNotificationManager != null;
+                        mNotificationManager.createNotificationChannel(notificationChannel);
+                    }
+                    assert mNotificationManager != null;
+                    mNotificationManager.notify((int) System.currentTimeMillis(), builder.build());
                     Intent i = new Intent (RecoveryActivity.this,LoginActivity.class);
                     startActivity(i);
                     finish();
