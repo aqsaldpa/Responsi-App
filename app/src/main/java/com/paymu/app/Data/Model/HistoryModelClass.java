@@ -1,4 +1,4 @@
-package com.paymu.app;
+package com.paymu.app.Data.Model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

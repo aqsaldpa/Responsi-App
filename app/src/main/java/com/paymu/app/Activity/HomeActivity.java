@@ -1,4 +1,4 @@
-package com.paymu.app;
+package com.paymu.app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,6 +18,8 @@ import com.paymu.app.Fragment.FragmentHistory;
 import com.paymu.app.Fragment.FragmentHome;
 import com.paymu.app.Fragment.FragmentPayment;
 import com.paymu.app.Fragment.FragmentSetting;
+import com.paymu.app.R;
+import com.paymu.app.SessionLog;
 
 public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;

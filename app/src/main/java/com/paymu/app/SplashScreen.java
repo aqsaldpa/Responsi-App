@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.paymu.app.Activity.LoginActivity;
+
 public class SplashScreen extends AppCompatActivity {
 
     @Override
@@ -18,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent (SplashScreen.this,LoginActivity.class);
+                Intent i = new Intent (SplashScreen.this, LoginActivity.class);
                 finishAffinity();
                 startActivity(i);
             }

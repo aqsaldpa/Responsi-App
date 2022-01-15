@@ -1,14 +1,9 @@
-package com.paymu.app;
+package com.paymu.app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
 import androidx.room.Room;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -20,8 +15,8 @@ import android.widget.Toast;
 import com.paymu.app.Data.DAO.UserDAO;
 import com.paymu.app.Data.Database.UserData;
 import com.paymu.app.Data.Model.UserEntity;
-
-import org.w3c.dom.Text;
+import com.paymu.app.R;
+import com.paymu.app.SessionLog;
 
 public class LoginActivity extends AppCompatActivity {
     private SessionLog session;

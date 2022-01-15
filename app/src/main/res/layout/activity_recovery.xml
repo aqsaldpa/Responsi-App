@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CCD1E4"
-    tools:context=".RecoveryActivity">
+    tools:context=".Activity.RecoveryActivity">
     <include layout="@layout/toolbar"/>
     <TextView
         android:id="@+id/textView2"

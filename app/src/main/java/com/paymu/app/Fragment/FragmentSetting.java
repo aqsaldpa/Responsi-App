@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.paymu.app.ProfileActivity;
+import com.paymu.app.Activity.ProfileActivity;
 import com.paymu.app.R;
 
 /**

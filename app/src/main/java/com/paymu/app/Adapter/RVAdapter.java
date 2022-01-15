@@ -4,18 +4,16 @@ import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.paymu.app.Fragment.FragmentHistory;
-import com.paymu.app.HistoryModelClass;
+import com.paymu.app.Data.Model.HistoryModelClass;
 import com.paymu.app.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.viewholder> implements View.OnClickListener{
 
