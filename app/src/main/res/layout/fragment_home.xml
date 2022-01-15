@@ -8,7 +8,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="660dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="55dp"
                     android:layout_marginTop="30dp"
-                    android:drawableTop="@drawable/ic_baseline_account_circle_24"
+                    android:drawableTop="@drawable/ic_baseline_account_box_24"
                     android:fontFamily="@font/poppins_regular"
                     android:text="Account"
                     android:textColor="@color/white"

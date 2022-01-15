@@ -25,7 +25,7 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class FragmentHistory extends Fragment {
-    List<HistoryModelClass> historylist;
+    ArrayList<HistoryModelClass> historylist;
     RecyclerView mrecyclerview;
     LinearLayoutManager mlayoutManager;
     RVAdapter adapter;
@@ -73,38 +73,57 @@ public class FragmentHistory extends Fragment {
 
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_history, container, false);
-        // Inflate the layout for this fragment
-        mrecyclerview = view.findViewById(R.id.Recyclervieww);
+        mrecyclerview = view.findViewById(R.id.recyclerviewww);
         mrecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
-        mrecyclerview.setAdapter(adapter);
-        initData();
-        initRecyclerView();
-
-        return view;
-
-    }
-
-    private void initRecyclerView() {
-        RecyclerView mrecyclerview = (RecyclerView) getActivity().findViewById(R.id.Recyclervieww);
-
-        LinearLayoutManager layoutManager = mlayoutManager;
-        new LinearLayoutManager(getActivity());
-        mrecyclerview.setLayoutManager(layoutManager);
-        mlayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        mrecyclerview.setLayoutManager(layoutManager);
-        RVAdapter adapter = new RVAdapter(historylist);
-        mrecyclerview.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
-
-    }
-
-    private void initData() {
         historylist = new ArrayList<>();
 
-        historylist.add(new HistoryModelClass(R.drawable.logo, "17 November 2020", "PLN Bill", "Succes", "_______________________________________"));
-        historylist.add(new HistoryModelClass(R.drawable.logo, "20 November 2020", "PLN Bill", "Succes", "_______________________________________"));
+        HistoryModelClass obj1 = (new HistoryModelClass("17 November 2021","PLN Bill","Success"));
+        historylist.add(obj1);
+
+        HistoryModelClass obj2 = (new HistoryModelClass("17 Desember 2021","Credit Card Bill","Failed"));
+        historylist.add(obj2);
+
+        HistoryModelClass obj3 = (new HistoryModelClass("17 November 2022","PLN Bill","Success"));
+        historylist.add(obj3);
+
+        HistoryModelClass obj4 = (new HistoryModelClass("30 Januari 2022","Kartu Halo Bill","Success"));
+        historylist.add(obj4);
+
+        HistoryModelClass obj5 = (new HistoryModelClass("21 Februari 2022","PDAM Bill","Failed"));
+        historylist.add(obj5);
+
+        HistoryModelClass obj6 = (new HistoryModelClass("17 Desember 2021","PLN Bill","Success"));
+        historylist.add(obj6);
+
+        HistoryModelClass obj7 = (new HistoryModelClass("17 Desember 2021","PLN Bill","Success"));
+        historylist.add(obj7);
+
+        HistoryModelClass obj8 = (new HistoryModelClass("17 Desember 2021","PLN Bill","Success"));
+        historylist.add(obj8);
+
+        HistoryModelClass obj9 = (new HistoryModelClass("17 Desember 2021","PLN Bill","Success"));
+        historylist.add(obj9);
+
+        HistoryModelClass obj10 = (new HistoryModelClass("17 Desember 2021","PLN Bill","Success"));
+        historylist.add(obj10);
+
+        HistoryModelClass obj11 = (new HistoryModelClass("17 Desember 2021","PLN Bill","Success"));
+        historylist.add(obj11);
+
+        HistoryModelClass obj12 = (new HistoryModelClass("17 Desember 2021","PLN Bill","Success"));
+        historylist.add(obj12);
+
+
+
+
+
+
+
+        mrecyclerview.setAdapter(new RVAdapter(historylist,this));
+        return view;
+
     }
 }

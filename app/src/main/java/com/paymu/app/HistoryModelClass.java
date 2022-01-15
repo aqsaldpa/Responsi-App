@@ -1,38 +1,60 @@
 package com.paymu.app;
 
-public class HistoryModelClass {
-    private int imageview;
-    private String tv1, tv2, tv3,divider;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-    public HistoryModelClass(int imageview, String tv1, String tv2, String tv3,String divider)
-    {
-        this.imageview = imageview;
-        this.tv1 = tv1;
-        this.tv2 = tv2;
-        this.tv3 = tv3;
-        this.divider = divider;
+    @Entity(tableName = "Transaksi")
+    public class HistoryModelClass {
+
+
+        @PrimaryKey(autoGenerate = true)
+        private int tid = 0;
+
+        @ColumnInfo(name = "Tanggal")
+        private String tgl;
+
+        @ColumnInfo(name = "Jenis")
+        private String jenis;
+
+        @ColumnInfo(name = "Status")
+        private String status;
+
+        public HistoryModelClass(String tanggal, String jenis, String status) {
+            this.tgl = tanggal;
+            this.jenis = jenis;
+            this.status = status;
+        }
+
+        public int getTid() {
+            return tid;
+        }
+
+        public void setTid(int tid) {
+            this.tid = tid;
+        }
+
+        public String getTanggal() {
+            return tgl;
+        }
+
+        public void setTanggal(String tanggal) {
+            this.tgl = tanggal;
+        }
+
+        public String getJenis() {
+            return jenis;
+        }
+
+        public void setJenis(String jenis) {
+            this.jenis = jenis;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
     }
-
-    public int getImageview() {
-        return imageview;
-    }
-
-    public String getDivider() {
-        return divider;
-    }
-
-    public String getTv1() {
-        return tv1;
-    }
-
-
-    public String getTv2() {
-        return tv2;
-    }
-
-
-    public String getTv3() {
-        return tv3;
-    }
-
-}

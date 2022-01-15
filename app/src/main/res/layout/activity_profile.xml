@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CCD1E4"
-    tools:context=".RegisterActivity">
+    tools:context=".ProfileActivity"
+    android:background="#CCD1E4">
 
-    <include layout="@layout/toolbar" />
-
+    <include layout ="@layout/toolbar"/>
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -16,7 +15,6 @@
         android:layout_marginStart="40dp"
         android:fontFamily="@font/poppins_regular"
         android:text="Email"
-        android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,10 +34,9 @@
 
 
         <EditText
-            android:id="@+id/etEmailRegister"
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/iconn"
             android:background="@android:color/transparent"
             android:fontFamily="@font/poppins_regular"
             android:hint="Email"
@@ -52,13 +49,6 @@
             android:textSize="12sp" />
 
 
-        <ImageView
-            android:id="@+id/iconn"
-            android:layout_width="14.7dp"
-            android:layout_height="10.3dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="17dp"
-            android:src="@drawable/ic_baseline_person_24" />
 
     </RelativeLayout>
 
@@ -68,8 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Password"
-        android:textColor="@color/black"
+        android:text="Name"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,14 +79,13 @@
 
 
         <EditText
-            android:id="@+id/etPassReg"
+            android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/icon"
             android:background="@android:color/transparent"
             android:fontFamily="@font/poppins_regular"
-            android:hint="Password"
-            android:inputType="textPassword"
+            android:hint="Name"
+            android:inputType="text"
             android:maxLines="1"
             android:paddingLeft="17dp"
             android:paddingTop="15dp"
@@ -105,15 +93,6 @@
             android:textColor="#2196F3"
             android:textColorHint="#2196F3"
             android:textSize="12sp" />
-
-
-        <ImageView
-            android:id="@+id/icon"
-            android:layout_width="14.7dp"
-            android:layout_height="10.3dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="17dp"
-            android:src="@drawable/ic_baseline_vpn_key_24" />
 
     </RelativeLayout>
 
@@ -124,8 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Confirm Password"
-        android:textColor="@color/black"
+        android:text="Adress"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,14 +124,13 @@
 
 
         <EditText
-            android:id="@+id/etConfirmPass"
+            android:id="@+id/etAdress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/icon3"
             android:background="@android:color/transparent"
             android:fontFamily="@font/poppins_regular"
-            android:hint="Password"
-            android:inputType="textPassword"
+            android:hint="Adress"
+            android:inputType="text"
             android:maxLines="1"
             android:paddingLeft="17dp"
             android:paddingTop="15dp"
@@ -163,23 +140,16 @@
             android:textSize="12sp" />
 
 
-        <ImageView
-            android:id="@+id/icon3"
-            android:layout_width="14.7dp"
-            android:layout_height="10.3dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="17dp"
-            android:src="@drawable/ic_baseline_vpn_key_24" />
 
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnSave"
         android:layout_width="130dp"
         android:layout_height="46dp"
         android:layout_marginTop="28dp"
         android:backgroundTint="#2196F3"
-        android:text="Register"
+        android:text="Save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"

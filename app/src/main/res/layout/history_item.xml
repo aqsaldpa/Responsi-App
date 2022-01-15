@@ -1,83 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:background="#CCD1E4"
+    app:cardCornerRadius="5dp"
+    android:layout_height="wrap_content"
+    android:elevation="5dp">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="95dp"
-        android:background="#ffffff">
-
-        <androidx.cardview.widget.CardView
-
-            android:id="@+id/imageview1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="50dp">
-
-            <ImageView
-                android:id="@+id/imageview"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/ic_launcher_round"></ImageView>
-
-        </androidx.cardview.widget.CardView>
+        android:background="#CCD1E4">
 
         <TextView
-            android:id="@+id/textview"
-            android:layout_width="120dp"
-            android:layout_height="30dp"
+            android:id="@+id/tgl"
+            android:layout_width="158dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@id/imageview1"
+            android:layout_marginTop="25dp"
             android:maxLines="1"
+            android:textStyle="bold"
             android:text="17 November 2020"
             android:textColor="#000000"
-            android:textSize="12sp">
+            android:textSize="15sp">
 
         </TextView>
 
         <TextView
-            android:id="@+id/textview2"
+            android:id="@+id/transaction"
             android:layout_width="140dp"
             android:layout_height="30dp"
-            android:layout_below="@+id/textview"
+            android:layout_below="@+id/tgl"
+            android:textColor="@color/black"
             android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/imageview1"
             android:text="PLN Bill"
             android:textSize="15sp">
 
         </TextView>
 
         <TextView
-            android:id="@+id/textview3"
+            android:id="@+id/status"
             android:layout_width="80dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="75dp"
+            android:layout_marginLeft="135dp"
             android:layout_marginTop="20dp"
-            android:layout_toRightOf="@id/textview"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/tgl"
             android:gravity="center"
             android:text="Success"
-            android:textSize="12sp">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:textColor="#CDC7C7"
-            android:id="@+id/Divider"
-            android:layout_marginTop="-5dp"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/imageview1"
-            android:layout_below="@id/imageview1"
-            android:text="hello">
+            android:textSize="15sp">
 
         </TextView>
     </RelativeLayout>
-</RelativeLayout>
+</androidx.cardview.widget.CardView>
